@@ -1,6 +1,7 @@
-.page{
+.page {
   margin: auto;
 }
+
 .pokemons {
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +9,10 @@
   width: 350px;
   gap: 40px;
 
+  &__pokemon:hover {
+    transition: 0.6s;
+scale: 105%;
+  }
 
   &__pokemon {
     flex-grow: 1;
@@ -19,7 +24,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-
+    cursor: pointer;
     &-name {
       font-weight: bold;
     }
@@ -88,6 +93,7 @@
 @media screen and (min-width: 751px) {
   .pokemons {
     width: 800px;
+
     &__button {
       width: 100%;
     }
@@ -95,12 +101,14 @@
 }
 
 @media screen and (min-width: 1051px) {
-  .page{
+  .page {
     display: flex;
+
     .pokemons {
       max-width: 900px;
-      margin:auto;
+      margin: auto;
       gap: 20px;
+
       &__pokemon {
         flex-grow: 1;
         width: 250px;
